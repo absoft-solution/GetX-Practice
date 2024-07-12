@@ -18,6 +18,20 @@ class _HomeScreenState extends State<HomeScreen> {
           "Hi","Hello"
         );
       }),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+             TextButton(onPressed: (){
+                Get.toNamed('/first_screen');
+             },child: Text("Go to 1st Screen"),),
+            TextButton(onPressed: (){
+              Get.toNamed('/second_screen');
+            },child: Text("Go to 2nd Screen"),),
+          ],
+        ),
+      ),
     );
   }
 }
