@@ -23,12 +23,16 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            ListTile(
+              title: Text('message'.tr),
+              subtitle: Text('name'.tr),
+            ),
              TextButton(onPressed: (){
-                Get.toNamed('/first_screen');
-             },child: Text("Go to 1st Screen"),),
+                Get.updateLocale(Locale('en','US'));
+             },child: Text("English"),),
             TextButton(onPressed: (){
-              Get.toNamed('/second_screen');
-            },child: Text("Go to 2nd Screen"),),
+              Get.updateLocale(Locale('ur','PK'));
+            },child: Text("Urdu"),),
           ],
         ),
       ),
