@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_practice/services/lang_services.dart';
 import 'package:getx_practice/view/first_screen.dart';
 import 'package:getx_practice/view/home_screen.dart';
+import 'package:getx_practice/view/login_screen.dart';
 import 'package:getx_practice/view/second_screen.dart';
 
 void main() {
@@ -22,13 +23,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       translations: LangServices(),
-      locale: Locale('en','US'),
-      fallbackLocale: Locale('ur','PK'),
-      home: HomeScreen(),
+      locale: Locale('en', 'US'),
+      fallbackLocale: Locale('ur', 'PK'),
+      home: LoginScreen(),
       getPages: [
-        GetPage(name: '/second_screen', page: ()=>SecondScreen()),
-        GetPage(name: '/first_screen', page: ()=>FirstScreen()),
-
+        GetPage(name: '/second_screen', page: () => SecondScreen()),
+        GetPage(name: '/first_screen', page: () => FirstScreen()),
       ],
     );
   }
